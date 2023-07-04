@@ -44,3 +44,17 @@ void loop() {
   matrix.fillScreen(0);
   matrix.swapBuffers(true);
 }
+
+void Berechnung(){
+int jetztjahr = year();
+int jetztmonat = month();
+
+
+
+
+
+
+
+Serial.println(jetztmonat);
+Serial.println(Monate);
+}
