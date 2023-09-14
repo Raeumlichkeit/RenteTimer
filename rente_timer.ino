@@ -23,6 +23,8 @@ const char str[] PROGMEM = "und den Rest von Diesem";
 int16_t    textX         = 32,
            textMin       = (int16_t)sizeof(str) * -12;
 
+const char str1[] PROGMEM = "Moeller 0 : 1 Commodity";
+
 void setup() {
   Serial.begin(9600);
   matrix.begin();
@@ -127,7 +129,7 @@ void checkdate() {
     matrix.setTextSize(2);
     matrix.fillScreen(0);
     matrix.setCursor(textX, 1);
-    matrix.print("Moeller 0 : 1 Commodity ");
+    matrix.print(F2(str1));
     delay(15);
     if ((--textX) < textMin) textX = matrix.width();
   }
